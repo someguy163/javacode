@@ -9,6 +9,7 @@ public class IntegerLiteralExample {
 		int var3 = 365;
 		int var4 = 0xB3;
 
+		
 		System.out.println(var1);
 		System.out.println(var2);
 		System.out.println(var3);
