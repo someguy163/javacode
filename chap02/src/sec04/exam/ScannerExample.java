@@ -8,6 +8,8 @@ public class ScannerExample {
 		// TODO Auto-generated method stub
 
 		Scanner scanner = new Scanner(System.in);
+//		Scanner scanner = new Scanner(System.in ,"EUC-KR);
+//		Scanner scanner = new Scanner(System.in,"UTF-8");
 		String inputData;
 		
 		while (true) {
