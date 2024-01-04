@@ -17,7 +17,7 @@ public class ScannerExample {
 				break;
 			}
 		}
-		System.out.println("종료");
+		System.out.println("종료되었습니다");
 		scanner.close();
 	}
 
