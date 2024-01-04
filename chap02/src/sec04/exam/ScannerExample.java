@@ -10,7 +10,7 @@ public class ScannerExample {
 		Scanner scanner = new Scanner(System.in);
 //		Scanner scanner = new Scanner(System.in ,"EUC-KR);
 //		Scanner scanner = new Scanner(System.in,"UTF-8");
-//		dd
+//		
 		String inputData;
 		
 		while (true) {
