@@ -80,8 +80,28 @@ github_pat_11A2LYOUI0MIRzEknHxVgG_43Asn5LnQi8juicieXXv0P7AN2DJAdWh3InLJjuH44mBDG
 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
 
 
-****************************************dd
+****************************************
 강제 형변환
 		int intValue = 44032;
 		char charValue = (char) intValue;
 		System.out.println(charValue);
+		
+int x=1;
+int y =2;
+double result = x/y
+결과값은 0.0 이나온다
+정상적인 값 출력을 원하면 
+double result = (double) x/y; 이다
+
+형변환 
+		int value1 = Integer.parseInt("10");
+		double value2 = Double.parseDouble("3.14");
+		boolean value3 = Boolean.parseBoolean("true");
+		String str1 =String.valueOf(10);
+		
+		
+		
+Scanner 
+//		Scanner sc = new Scanner(System.in);
+//		int date = sc.nextInt();
+//		System.out.println("date : "+date);
