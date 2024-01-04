@@ -20,6 +20,7 @@ public class PrintEx {
 		String name = "홍길동";
 		String job = "도적";
 		System.out.printf("%6d | %-10s | %10s\n" ,1,name,job);
+		System.out.println("d");
 	}
 
 }
