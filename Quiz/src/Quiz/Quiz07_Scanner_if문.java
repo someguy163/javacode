@@ -2,7 +2,7 @@ package Quiz;
 
 import java.util.Scanner;
 
-public class Quiz06_Scanner_if문 {
+public class Quiz07_Scanner_if문 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
