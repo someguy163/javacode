@@ -104,3 +104,12 @@ Scanner
 
 랜덤숫자 뽑기
 
+int random = (int) (Math.random()*6+1);
+
+Math.random() 은 기본 0 ~ 1 까지이다
+Math.random()*6+1 같이 작성하면 0부터7까지이다
+
+int random = (int) (Math.random()*6+1);
+는 정수형으로 바꾼다
+double random1 = Math.random()*6+1;
+원래 기본형식이다
