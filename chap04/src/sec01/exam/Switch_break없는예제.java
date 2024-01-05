@@ -1,6 +1,6 @@
 package sec01.exam;
 
-public class Switch_랜덤시간출력 {
+public class Switch_break없는예제 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
