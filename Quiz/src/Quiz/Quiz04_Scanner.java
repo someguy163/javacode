@@ -18,6 +18,7 @@ public class Quiz04_Scanner {
 		
 		System.out.println("--------------");
 		System.out.println("사다리꼴의 넓이 : " + result);
+		sc.close();
 	}
 
 }
