@@ -100,3 +100,7 @@ Scanner
 //		Scanner sc = new Scanner(System.in);
 //		int date = sc.nextInt();
 //		System.out.println("date : "+date);
+
+
+랜덤숫자 뽑기
+
