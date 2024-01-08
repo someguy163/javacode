@@ -1,4 +1,4 @@
-package sec01.exam;
+package 조건문_if_switch;
 
 public class Switch_break없는예제 {
 
