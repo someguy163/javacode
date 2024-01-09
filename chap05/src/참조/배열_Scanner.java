@@ -10,8 +10,9 @@ public class 배열_Scanner {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
 		
-//		int score[] = {};
-		int[] score = new int[3];
+		int score[] = new int[3];
+//		int[] score = new int[3];
+		
 		
 		System.out.print("국어 점수를 입력하세요 : ");
 		score[0] = sc.nextInt();
