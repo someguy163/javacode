@@ -1,5 +1,7 @@
 package 참조;
 
+import java.lang.reflect.Array;
+
 public class 참조 {
 
 	public static void main(String[] args) {
@@ -30,6 +32,7 @@ public class 참조 {
 		if (strVar3.equals(strVar4)) {
 			System.out.println("strVar3 , strVar4는 문자열이 같음");
 		}
+		
 	}
 
 }
