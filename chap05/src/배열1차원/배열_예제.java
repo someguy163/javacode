@@ -1,4 +1,4 @@
-package 참조;
+package 배열1차원;
 
 public class 배열_예제 {
 

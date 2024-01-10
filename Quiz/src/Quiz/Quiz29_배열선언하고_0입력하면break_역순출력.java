@@ -28,7 +28,7 @@ public class Quiz29_배열선언하고_0입력하면break_역순출력 {
 			}
 			
 		}
-		
+		sc.close();
 	}
 
 }
