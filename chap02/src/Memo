@@ -116,3 +116,50 @@ double random1 = Math.random()*6+1;
 
 배열선언과 길이 정하기
 int score[] = new int[3];
+
+다차원 배열 
+
+		for(int i=0; i<mathscore.length; i++) {
+			for(int j =0; j<mathscore[i].length; j++) {
+				System.out.print(mathscore[i][j]);
+			}
+		}
+		첫번째 for문은 다차원배열의 컬럼(세로)길이의 값을 나타내고
+		두번째 for문은 다차원배열의 로우(가로)길이의 값을 나타낸다
+		
+		
+		0 0 0 0
+		0 0 0 0
+		0 0 0 0
+		
+		로우 값은 = 3
+		컬럼 값은 = 4
+		
+배열복사
+
+		String oldStrArrayString[] = {"java","array","copy"};
+		String newStrArray[] = new String[5];
+		System.arraycopy(oldStrArrayString, 0, newStrArray, 0, oldStrArrayString.length);
+		
+//		olStrArrayString을 newStrArray에다 복사한다 얼마만큼? oldStrArrayString의length만큼 가져온다
+		
+//		oldStrArrayString.length 을 2로 바꾸면 java , array만 가져온다.
+		
+//		System.arraycopy(oldStrArrayString, 0, newStrArray, 1, oldStrArrayString.length);
+//		에서 newStrArray뒤에 있는 숫자는 newStrArray에서 몇번째 인덱스에 넣을것인지 지정하는 인덱스번호이다.
+		
+//		System.arraycopy(oldStrArrayString, 0, newStrArray, 1, oldStrArrayString.length);
+//		에서 oldStrArrayString 뒤에 있는 숫자는 oldStrArrayString의 배열에서 몇번 인덱스 부터 가져올것인지 의미한다.
+//		단 0이 아니라 1로 입력하면 뒤에있는 oldStrArrayString.length 를 2로 바꿔야한다
+		
+//		교제 196pg
+
+
+배열 다른 for문
+		int scores[] = {95,71,84,93,87};
+		
+		int sum =0;
+//		배열과 같은 타입인 int를 선언하고 score 변수에다 scores 배열을 차례대로 넣는다
+		for(int score : scores) {
+			sum = sum+score;
+		}
