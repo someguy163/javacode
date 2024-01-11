@@ -163,3 +163,6 @@ int score[] = new int[3];
 		for(int score : scores) {
 			sum = sum+score;
 		}
+		
+		
+인스턴스 : 클래스로 부터 만들어진 객체
