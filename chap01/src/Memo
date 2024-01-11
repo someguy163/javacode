@@ -166,3 +166,36 @@ int score[] = new int[3];
 		
 		
 인스턴스 : 클래스로 부터 만들어진 객체
+필드 : 객체의 고유데이터
+
+메소드 오버로딩 : 같은메소드의 이름을 매개의 갯수나 타입을 다르게 하여 여러개 사용가능한것
+
+
+////////////////////////////////////////////////////////////
+1.	public Car(String model) {
+		this(model,null,0);
+
+	}
+
+2.	public Car(String model, String color) {
+		this(model,color,0);
+	}
+
+
+3.	public Car(String model,String color, int maxSpeed) {
+		this.model = model;
+		this.color = color;
+		this.maxSpeed = maxSpeed;
+	}
+	매개변수가 가장 많은것에서 부터 시작된다
+	3번 생성자는 매개변수가 String model,String color, int maxSpeed 있다.
+	2번 생성자로 내려가서 보면 2번 생성자 매개는  String model, String color 이다
+	this를 통해서 2번생성자에서 3번생성자에는 있는 매개를 변수의 타입에 따라 0,null로 해준다
+	1번 생성자와 3번생성자를 비교해보면 1번은 매개가 1개 3번은 매개가 3개 이다
+	1번과 3번을 비교해서 없는 값들을 null,0으로 해준다
+	
+	chap06 -> 클래스 -> 생성자_this활용해서_중복제거 파일 확인하면된다.
+	
+////////////////////////////////////////////////////////////
+	
+	
