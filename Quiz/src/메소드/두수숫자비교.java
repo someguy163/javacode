@@ -2,7 +2,7 @@ package 메소드;
 
 import java.util.Scanner;
 
-public class Exam {
+public class 두수숫자비교 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
