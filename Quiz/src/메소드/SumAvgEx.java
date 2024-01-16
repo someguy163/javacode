@@ -1,6 +1,5 @@
 package 메소드;
 
-import java.util.Iterator;
 import java.util.Scanner;
 
 public class SumAvgEx {
@@ -8,6 +7,7 @@ public class SumAvgEx {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int scores[] = new int[5];
+		Cal cal = new Cal();
 //		int sum =0;
 		int j=0;
 		int count=0;
@@ -19,21 +19,33 @@ public class SumAvgEx {
 			scores[i]=sc.nextInt();
 		}
 		
-		int sum = sum(scores);
+		int sum = Cal.sum(scores);
 		System.out.println("합계 : "+sum);
-		int avg = avg(scores);
+		int avg = Cal.avg(scores);
 		System.out.println("평균 : "+avg);
 
 	}
-	public static int sum(int[] x) {
-		int sum=0;
-		for(int i =0; i<x.length; i++) {
-			int count=0;
-			sum = sum + x[i];
-			count++;
-		}
-		return sum;
-	}
+//	public static int sum(int[] x) {
+//		int sum=0;
+//		for(int i =0; i<x.length; i++) {
+//			sum = sum + x[i];
+//		}
+//		return sum;
+//	}
+//	public static int avg(int[] x) {
+//		int sum =0;
+//		int count=0;
+//		int avg=0;
+//		for(int i=0;i<x.length;i++) {
+//			sum +=x[i];
+//			count++;
+//		}
+//		avg = sum/count;
+//		return avg;
+//	}
+
+}
+class Cal{
 	public static int avg(int[] x) {
 		int sum =0;
 		int count=0;
@@ -45,5 +57,11 @@ public class SumAvgEx {
 		avg = sum/count;
 		return avg;
 	}
-
+	public static int sum(int[] x) {
+		int sum=0;
+		for(int i =0; i<x.length; i++) {
+			sum = sum + x[i];
+		}
+		return sum;
+	}
 }
