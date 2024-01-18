@@ -3,7 +3,7 @@ package 접근제한자_클래스_메소드_싱글톤;
 import java.util.Iterator;
 import java.util.Scanner;
 
-public class AccountEx {
+public class 박주형_AccountEx {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
