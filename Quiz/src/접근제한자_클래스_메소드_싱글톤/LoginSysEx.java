@@ -71,20 +71,24 @@ class Member{
 
 }
 class View{
-//	Member members[];
-
+	Member members[];
+	
+	
+	int signUpCount =0;	
 	
 	
 	public View() {
-//		this.members = new Member[100];
-//		for(int i=0; i<members.length; i++) {
-//			members[i] = new Member();
-//		}
+		
+		this.members = new Member[100];
+		for(int i=0; i<members.length; i++) {
+			members[i] = new Member();
+		}
 	}
+	
 	boolean Run = true;
 	int checkInd = 0;
 	
-	int signUpCount =0;
+	
 	public void menu() {
 		while (Run) {
 			System.out.println("MIT 사이트에 오신 것을 환영합니다");
@@ -117,23 +121,25 @@ class View{
 	public void userfault() {
 
 	}
+	
 	public void signUp() {
+		
 		if (signUpCount<=100) {
 			System.out.println("회원가입을 합니다");
 			System.out.println("아이디를 입력하세요");
 			String id = LoginSysEx.sc.next();
-//			LoginSysEx.members[signUpCount].setId(id);
+			members[signUpCount].setId(id);
 			System.out.println("비밀번호를 입력하세요");
 			String password = LoginSysEx.sc.next();
-//			members[signUpCount].setPassWord(password);
+			members[signUpCount].setPassWord(password);
 			System.out.println("이름을 입력하세요");
 			String name = LoginSysEx.sc.next();
-//			members[signUpCount].setName(name);
+			members[signUpCount].setName(name);
 			System.out.println("전화번호를 입력하세요");
 			String phone = LoginSysEx.sc.next();
-//			members[signUpCount].setPhoneNum(phone);
-			System.out.println(signUpCount);
-			Member member = new Member(id,password,phone,name);
+			members[signUpCount].setPhoneNum(phone);
+//			System.out.println(signUpCount);
+//			Member members = new Member(id,password,phone,name);
 			signUpCount++;
 		}else {
 			deadline();
@@ -148,7 +154,7 @@ class View{
 		System.out.println("비밀먼호를 입력하세요");
 		account[1] = LoginSysEx.sc.next();
 		for(int i =0; i<=signUpCount; i++) {
-				if (LoginSysEx.members[i].getId().equals(account[0]) || LoginSysEx.members[i].getPassWord() == account[1]) {
+				if (members[i].getId().equals(account[0]) || members[i].getPassWord() == account[1]) {
 					
 				}
 					else {
