@@ -143,15 +143,15 @@ class View{
 
 				}
 				case 2: {
-						System.out.println("삭제하기 위한 비밀번호를 입력하세요");
-						String chkPassword = BoardEx.sc.next();
-						if (BoardEx.board[selectListNum].getPassword().equals(chkPassword)) {
-							BoardEx.board[selectListNum] = null;
-							System.out.println("삭제가 완료되었습니다");
-						}
-						else {
-							System.out.println("비밀번호가 맞지 않습니다");
-						}
+					System.out.println("삭제하기 위한 비밀번호를 입력하세요");
+					String chkPassword = BoardEx.sc.next();
+					if (BoardEx.board[selectListNum].getPassword().equals(chkPassword)) {
+						BoardEx.board[selectListNum] = null;
+						System.out.println("삭제가 완료되었습니다");
+					}
+					else {
+						System.out.println("비밀번호가 맞지 않습니다");
+					}
 					break;
 				}
 				case 3: {
@@ -161,12 +161,6 @@ class View{
 				}
 			}
 		}
-
-
-
-
-
-
 	}
 
 }
@@ -201,7 +195,6 @@ class Controller{
 				mainMenuRun = false;
 				break;
 			}
-
 			}
 		}
 	}
