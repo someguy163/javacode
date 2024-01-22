@@ -119,8 +119,6 @@ class James{
 		System.out.println( "제임스가 먹은 빵의 총 가격은 ? : "+(paribaguette.redBeanBread.price + paribaguette.moccaBread.price + paribaguette.creamDonut.price));
 	}	
 
-
-
 //오버로딩
 //	public int buy(Paribaguette paribaguette) {
 //
