@@ -5,7 +5,7 @@ public class PrinterMain {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		PrinterRun(new Samsung());
-		colorPrint(new Samsung());
+		
 		PrinterRun(new LG());
 	}
 	public static void PrinterRun(Printer print) {
@@ -17,15 +17,12 @@ public class PrinterMain {
 		print.print("자바 이론 문서");	
 
 	}
-	public static void colorPrint(ColorPrintabl colorPrintabl) {
-		colorPrintabl.ColorPrint();
-	}
 }
-interface Printer extends ColorPrintabl{
+interface Printer {
 	void print(String doc);
 }
-interface ColorPrintabl{
-	void ColorPrint();
+interface ColorPrintabl extends Printer{
+	void print(String doc);
 }
 class Samsung implements Printer{
 
@@ -33,14 +30,12 @@ class Samsung implements Printer{
 	public void print(String doc) {
 		System.out.println("삼성프린터");
 		System.out.println(doc+"를 인쇄합니다");
-
-	}
-
-	@Override
-	public void ColorPrint() {
 		System.out.println("삼성프린터");
-		System.out.println("컬러로자바 이론문서를 인쇄합니다");
+		System.out.println("컬러로"+doc+"를 인쇄합니다");
 	}
+
+
+
 
 }
 class LG implements Printer{
@@ -52,9 +47,6 @@ class LG implements Printer{
 		System.out.println(doc+"를 인쇄합니다");
 	}
 
-	@Override
-	public void ColorPrint() {
-		
-	}
+
 
 }
