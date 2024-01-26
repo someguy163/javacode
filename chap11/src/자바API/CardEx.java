@@ -30,6 +30,5 @@ class Card{
 	}
 	public String toString() {
 		return kind + " , " + number; 
-	}
-	
+	}	
 }
