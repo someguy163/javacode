@@ -7,84 +7,17 @@ public class CoffeeShopEx {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		Scanner sc = new Scanner(System.in);
-
-		int resultMenuCount =0;
-
-		System.out.println("***java nara CoffeShop영업개시***");
-		System.out.println("몇잔을 주문하시겠습니까?");
-		int selectCount = sc.nextInt();
-		Beverage[] menu = new Beverage[selectCount];
-		System.out.println(selectCount + "잔의 음료를 선택하세요");
-		System.out.println("1. Americano ");
-		System.out.println("2. CafeLatte");
-		System.out.println("3. Cappuccino ");
-		System.out.println("4. LemonTea ");
-		System.out.println("5. hinsengTea ");
-		System.out.println("6. redginsengTea ");
-		for(int i=0; i<selectCount; i++) {
-			System.out.println("주문 >> ");
-			int selectMenu = sc.nextInt();
-			switch (selectMenu) {
-			case 1: {
-				Beverage beverage1 = new Coffee("Americano");
-				beverage1.calcPrice("Americano", 1500);
-				menu[resultMenuCount] = beverage1;
-				coffeOrdercount++;
-				resultMenuCount++;
-				break;
-			}
-			case 2: {
-				Beverage beverage2 = new Coffee("CafeLatte");
-				beverage2.calcPrice("CafeLatte", 2500);
-				menu[resultMenuCount] = beverage2;
-				coffeOrdercount++;
-				resultMenuCount++;
-				break;
-			}
-			case 3: {
-				Beverage beverage3 = new Coffee("Cappuccino");
-				beverage3.calcPrice("Cappuccino", 3000);
-				menu[resultMenuCount] = beverage3;
-				coffeOrdercount++;
-				resultMenuCount++;
-				break;
-			}
-			case 4: {
-				Beverage beverage4 = new Tea("lemonTea");
-				beverage4.calcPrice("lemonTea", 1500);
-				menu[resultMenuCount] = beverage4;
-				TeaOrdercount++;
-				resultMenuCount++;
-				break;
-			}
-			case 5: {
-				Beverage beverage5 = new Tea("ginsengTea");
-				beverage5.calcPrice("ginsengTea", 2000);
-				menu[resultMenuCount] = beverage5;
-				resultMenuCount++;
-				TeaOrdercount++;
-				break;
-			}
-			case 6: {
-				Beverage beverage6 = new Tea("redginsengTea");
-				beverage6.calcPrice("redginsengTea", 2500);
-				menu[resultMenuCount] = beverage6;
-				resultMenuCount++;
-				TeaOrdercount++;
-				break;
-			}
-			}
-
-
-		}
-		getSaleinfo(menu, selectCount);
-		getTotalPrice(menu, selectCount); 
+		Beverage.print();
+		getSaleinfo(menu, CoffeeShopEx.selectCount);
+		getTotalPrice(menu, CoffeeShopEx.selectCount); 
 	}
 
 	public static int amount=0;
 	public static int coffeOrdercount =0;
 	public static int TeaOrdercount =0;
+	public static Beverage menu[];
+	public static Scanner sc = new Scanner(System.in);
+	public static int selectCount=0;
 	
 //	출력문
 	public static  void getSaleinfo(Beverage[] menu , int count) {
@@ -139,8 +72,78 @@ abstract class Beverage{
 
 	abstract void calcPrice(String name, int price);
 
-	void print() {
+	static void print() {
+		int resultMenuCount =0;
 
+		System.out.println("***java nara CoffeShop영업개시***");
+		System.out.println("몇잔을 주문하시겠습니까?");
+		CoffeeShopEx.selectCount = CoffeeShopEx.sc.nextInt();
+		CoffeeShopEx.menu = new Beverage[CoffeeShopEx.selectCount];
+		System.out.println(CoffeeShopEx.selectCount + "잔의 음료를 선택하세요");
+		
+		System.out.println("1. Americano ");
+		System.out.println("2. CafeLatte");
+		System.out.println("3. Cappuccino ");
+		System.out.println("4. LemonTea ");
+		System.out.println("5. hinsengTea ");
+		System.out.println("6. redginsengTea ");
+		
+		for(int i=0; i<CoffeeShopEx.selectCount; i++) {
+			System.out.println("주문 >> ");
+			int selectMenu = CoffeeShopEx.sc.nextInt();
+			switch (selectMenu) {
+			case 1: {
+				Beverage beverage1 = new Coffee("Americano");
+				beverage1.calcPrice("Americano", 1500);
+				CoffeeShopEx.menu[resultMenuCount] = beverage1;
+				CoffeeShopEx.coffeOrdercount++;
+				resultMenuCount++;
+				break;
+			}
+			case 2: {
+				Beverage beverage2 = new Coffee("CafeLatte");
+				beverage2.calcPrice("CafeLatte", 2500);
+				CoffeeShopEx.menu[resultMenuCount] = beverage2;
+				CoffeeShopEx.coffeOrdercount++;
+				resultMenuCount++;
+				break;
+			}
+			case 3: {
+				Beverage beverage3 = new Coffee("Cappuccino");
+				beverage3.calcPrice("Cappuccino", 3000);
+				CoffeeShopEx.menu[resultMenuCount] = beverage3;
+				CoffeeShopEx.coffeOrdercount++;
+				resultMenuCount++;
+				break;
+			}
+			case 4: {
+				Beverage beverage4 = new Tea("lemonTea");
+				beverage4.calcPrice("lemonTea", 1500);
+				CoffeeShopEx.menu[resultMenuCount] = beverage4;
+				CoffeeShopEx.TeaOrdercount++;
+				resultMenuCount++;
+				break;
+			}
+			case 5: {
+				Beverage beverage5 = new Tea("ginsengTea");
+				beverage5.calcPrice("ginsengTea", 2000);
+				CoffeeShopEx.menu[resultMenuCount] = beverage5;
+				resultMenuCount++;
+				CoffeeShopEx.TeaOrdercount++;
+				break;
+			}
+			case 6: {
+				Beverage beverage6 = new Tea("redginsengTea");
+				beverage6.calcPrice("redginsengTea", 2500);
+				CoffeeShopEx.menu[resultMenuCount] = beverage6;
+				resultMenuCount++;
+				CoffeeShopEx.TeaOrdercount++;
+				break;
+			}
+			}
+
+
+		}
 	};
 
 }
