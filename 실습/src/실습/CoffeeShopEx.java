@@ -18,8 +18,8 @@ public class CoffeeShopEx {
 	public static Beverage menu[];
 	public static Scanner sc = new Scanner(System.in);
 	public static int selectCount=0;
-	
-//	출력문
+
+	//	출력문
 	public static  void getSaleinfo(Beverage[] menu , int count) {
 		for(int i=0; i<count; i++) {
 			System.out.println(i+1 + "번째 판매 음료는 " + menu[i].getName() + " 가격은 : " + menu[i].getPrice());
@@ -35,8 +35,8 @@ public class CoffeeShopEx {
 		System.out.println("Coffe의 판매 갯수 : " + coffeOrdercount);
 		System.out.println("Tea의 판매 갯수 : " + TeaOrdercount);
 	}
-	
-	
+
+
 }
 abstract class Beverage{
 
@@ -80,14 +80,14 @@ abstract class Beverage{
 		CoffeeShopEx.selectCount = CoffeeShopEx.sc.nextInt();
 		CoffeeShopEx.menu = new Beverage[CoffeeShopEx.selectCount];
 		System.out.println(CoffeeShopEx.selectCount + "잔의 음료를 선택하세요");
-		
+
 		System.out.println("1. Americano ");
 		System.out.println("2. CafeLatte");
 		System.out.println("3. Cappuccino ");
 		System.out.println("4. LemonTea ");
 		System.out.println("5. hinsengTea ");
 		System.out.println("6. redginsengTea ");
-		
+
 		for(int i=0; i<CoffeeShopEx.selectCount; i++) {
 			System.out.println("주문 >> ");
 			int selectMenu = CoffeeShopEx.sc.nextInt();
@@ -141,8 +141,6 @@ abstract class Beverage{
 				break;
 			}
 			}
-
-
 		}
 	};
 
