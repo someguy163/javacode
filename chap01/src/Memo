@@ -262,3 +262,40 @@ return;
 
 System.exit(0);
 는 아예 프로그램을 종료하는것이다
+
+
+
+
+/////////////////////////////
+Set
+저장순서 유지되지 않으며 객체 중복하여 저장할 수 없고 하나의 null만 저장할 수 있다.
+
+Iterator :
+
+		Set<String> set = new HashSet<>();
+		
+		set.add("java");
+		set.add("JDBC");
+		set.add("Selvlet/JSP");
+		set.add("java");
+		set.add("IBATIS");
+		
+		int size = set.size();
+		System.out.println("set 사이즈 : " + size);
+		
+		Iterator<String> iterator = set.iterator();
+		while (iterator.hasNext()) {
+			System.out.println("\t" + iterator.next());
+
+		}
+		
+Hashset타입으로 선언된 set 의 배열을
+Iterator 배열에 값을 넣고 
+while 문을 통해서 hasNext()를 통해서 다음값을 호출하고
+sout문을 통해서 해당 인덱스 번호의 값을 출력한다.
+
+////////////////////
+Map
+Map<String, Integer> map = new HashMap<String,Integer>();
+key값은 중복 안되지만 value값은 중복가능하다.
+

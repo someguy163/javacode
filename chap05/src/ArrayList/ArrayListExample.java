@@ -1,6 +1,7 @@
 package ArrayList;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class ArrayListExample {
@@ -24,6 +25,14 @@ public class ArrayListExample {
 		System.out.println("2 " + skill);
 		System.out.println();
 		
+		
+		Iterator<String> iterator = list.iterator();
+		
+		while (iterator.hasNext()) {
+			System.out.println("\t" + iterator.next());
+			
+		}
+		
 		int i=0;
 		for(String list2 : list) {
 			System.out.println(i + " : " + list.get(i));
@@ -36,7 +45,7 @@ public class ArrayListExample {
 		
 		int j=0;
 		for(String list2 : list) {
-			System.out.println(j + " : " + list.get(j));
+			System.out.println(list2);
 			j++;
 		}
 		
